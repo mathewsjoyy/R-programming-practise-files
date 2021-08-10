@@ -1,0 +1,57 @@
+---
+# This section is in yaml (metadata), you can customize alot!
+title: "R markdown intro"
+author: "Mathews Joy"
+date: "10/08/2021"
+# You can add a table of contents (TOC) using the toc option and specify the depth of headers that it
+#applies to using the toc_depth option. We use 2 as we only have 2 headers
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    theme: united
+   #toc_float: true # This will float the TOC on the left so you can always see it
+---
+
+<!-- You can use direct css in the markdown file to customize thing such as dont size -->
+<style type="text/css">
+  body{
+  font-size: 10pt;
+}
+</style>
+
+
+<!-- is used to specify any global settings to be applied to the R Markdown script. The example sets all code chunks as “echo=TRUE”, meaning they will be included in the final rendered version. You can specify other settings in this code chunk, such as the working directory. -->
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring:
+
+* HTML
+* PDF
+* MS Word documents
+
+For more details on using R Markdown see [rmarkdown.rstudio](http://rmarkdown.rstudio.com).
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+<!-- We can add code chunks by clicking the green icon with a c in it, give it a title like 'cars' -->
+<!-- Then insert what code you want to show the stakeholders in the back ticks -->
+<!-- You can also run the code and check for errors, and select stuff like wether to show these errors, etc. -->
+```{r cars}
+summary(cars)
+```
+
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
